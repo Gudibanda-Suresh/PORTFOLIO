@@ -1,7 +1,7 @@
 import { Mail, ExternalLink, ArrowUp } from 'lucide-react'
 import SGLogo from './SGLogo'
 
-const navLinks = ['About', 'Skills', 'Experience', 'Education', 'Contact']
+const navLinks = ['About', 'Skills', 'Experience', 'Projects', 'Education', 'Certifications', 'Contact']
 
 export default function Footer() {
   return (

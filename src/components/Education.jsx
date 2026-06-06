@@ -32,7 +32,7 @@ export default function Education() {
                     Master of Computer Applications
                   </h3>
                   <p className="text-indigo-600 dark:text-indigo-400 font-bold mt-1">
-                    MCA in Computer Applications
+                    MCA
                   </p>
                 </div>
               </div>

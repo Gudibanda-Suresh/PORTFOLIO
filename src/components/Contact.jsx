@@ -91,21 +91,21 @@ export default function Contact() {
           inView={inView}
         />
 
-        <div className="mt-8 sm:mt-12 grid lg:grid-cols-2 gap-8 lg:gap-12">
+        <div className="mt-8 sm:mt-12 grid lg:grid-cols-2 gap-8 lg:gap-10 items-start">
           {/* Left: info */}
           <div
-            className={`space-y-6 transition-all duration-700 ${
+            className={`flex flex-col gap-5 transition-all duration-700 ${
               inView ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-12'
             }`}
           >
-            <div className="space-y-1">
+            <div>
               <h3 className="text-2xl font-black text-gray-900 dark:text-white">Get In Touch</h3>
-              <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
+              <p className="text-gray-600 dark:text-gray-400 leading-relaxed mt-1">
                 I'm open to new opportunities, collaborations, and interesting conversations. Drop me a line!
               </p>
             </div>
 
-            <div className="space-y-3">
+            <div className="flex flex-col gap-3">
               {contactLinks.map(({ icon: Icon, label, value, href, color, bg, hover }) => {
                 const inner = (
                   <div
@@ -116,11 +116,11 @@ export default function Contact() {
                     >
                       <Icon size={18} className="text-white" />
                     </div>
-                    <div>
+                    <div className="min-w-0 flex-1">
                       <p className="text-xs font-semibold text-gray-500 dark:text-gray-500 uppercase tracking-wider">
                         {label}
                       </p>
-                      <p className="text-sm font-semibold text-gray-900 dark:text-white mt-0.5 break-all">
+                      <p className="text-sm font-semibold text-gray-900 dark:text-white mt-0.5 truncate">
                         {value}
                       </p>
                     </div>
@@ -132,6 +132,7 @@ export default function Contact() {
                     href={href}
                     target={href.startsWith('http') ? '_blank' : undefined}
                     rel="noopener noreferrer"
+                    className="block"
                   >
                     {inner}
                   </a>
@@ -141,9 +142,11 @@ export default function Contact() {
               })}
             </div>
 
-            <div className="inline-flex items-center gap-2.5 px-4 py-2.5 rounded-full bg-emerald-50 dark:bg-emerald-950/50 border border-emerald-200 dark:border-emerald-800/50 text-sm font-semibold text-emerald-700 dark:text-emerald-400">
-              <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse" />
-              Currently open to new opportunities
+            <div className="flex items-center gap-2.5 px-4 py-3 rounded-2xl bg-emerald-50 dark:bg-emerald-950/50 border border-emerald-200 dark:border-emerald-800/50">
+              <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse flex-shrink-0" />
+              <span className="text-sm font-semibold text-emerald-700 dark:text-emerald-400">
+                Currently open to new opportunities
+              </span>
             </div>
 
             {/* Languages */}
