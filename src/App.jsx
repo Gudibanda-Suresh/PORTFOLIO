@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import About from './components/About'
+import PersonalNote from './components/PersonalNote'
 import Skills from './components/Skills'
 import Experience from './components/Experience'
 import Projects from './components/Projects'
@@ -37,6 +38,7 @@ function App() {
       <Projects />
       <Education />
       <Certifications />
+      <PersonalNote />
       <Contact />
       <Footer />
     </div>

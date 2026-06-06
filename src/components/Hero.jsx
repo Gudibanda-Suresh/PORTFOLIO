@@ -1,12 +1,12 @@
 import { ExternalLink, Mail, MapPin, ChevronDown, Download } from 'lucide-react'
 
 const floatingTags = [
-  { text: 'Spring Boot', pos: 'top-20 left-3 sm:left-10', delay: '0ms' },
-  { text: 'React', pos: 'top-32 right-3 sm:right-10', delay: '500ms' },
-  { text: 'Kafka', pos: 'bottom-36 left-6 sm:left-16', delay: '1000ms' },
-  { text: 'Microservices', pos: 'bottom-24 right-4 sm:right-14', delay: '1500ms' },
-  { text: 'PostgreSQL', pos: 'top-[45%] left-1 sm:left-6', delay: '750ms' },
-  { text: 'Docker', pos: 'top-[45%] right-1 sm:right-6', delay: '1250ms' },
+  { text: 'Spring Boot', pos: 'top-24 left-2 sm:left-10', delay: '0ms' },
+  { text: 'React',       pos: 'top-24 right-2 sm:right-10', delay: '500ms' },
+  { text: 'Kafka',       pos: 'top-[38%] left-2 sm:left-16', delay: '1000ms' },
+  { text: 'Docker',      pos: 'top-[38%] right-2 sm:right-16', delay: '1250ms' },
+  { text: 'PostgreSQL',  pos: 'bottom-32 left-2 sm:left-10', delay: '750ms' },
+  { text: 'Kubernetes',  pos: 'bottom-32 right-2 sm:right-10', delay: '1500ms' },
 ]
 
 export default function Hero() {
@@ -23,16 +23,16 @@ export default function Hero() {
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[240px] sm:w-[500px] h-[240px] sm:h-[500px] bg-cyan-400/5 dark:bg-cyan-500/5 rounded-full blur-3xl" />
       </div>
 
-      {/* Floating tech tags — visible sm+ */}
-      <div className="absolute inset-0 pointer-events-none hidden sm:block">
+      {/* Floating tech tags — all screen sizes */}
+      <div className="absolute inset-0 pointer-events-none">
         {floatingTags.map(({ text, pos, delay }) => (
           <span
             key={text}
-            className={`absolute ${pos} px-3 py-1.5 rounded-full text-xs font-mono font-medium
+            className={`absolute ${pos} px-2 py-1 sm:px-3 sm:py-1.5 rounded-full text-[10px] sm:text-xs font-mono font-medium
               bg-white/70 dark:bg-gray-900/70 backdrop-blur-sm
               border border-indigo-200/60 dark:border-indigo-800/60
               text-indigo-600 dark:text-indigo-400
-              shadow-sm animate-float opacity-60`}
+              shadow-sm animate-float opacity-50 sm:opacity-60`}
             style={{ animationDelay: delay }}
           >
             {text}
@@ -103,32 +103,47 @@ export default function Hero() {
           </a>
         </div>
 
-        {/* CTA buttons — full width on mobile */}
-        <div className="w-full sm:w-auto flex flex-col sm:flex-row items-stretch sm:items-center gap-3 pt-1 animate-slide-up delay-400 px-2 sm:px-0">
-          <a
-            href="#contact"
-            className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-2xl bg-gradient-to-r from-indigo-600 to-violet-600 hover:from-indigo-500 hover:to-violet-500 text-white font-bold text-sm shadow-lg shadow-indigo-500/30 hover:shadow-indigo-500/50 hover:-translate-y-0.5 transition-all duration-300"
-          >
-            <Mail size={16} />
-            Get In Touch
-          </a>
-          <a
-            href="/resume/resume.pdf"
-            download="Suresh_Gudibanda_Resume.pdf"
-            className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-2xl border border-indigo-200 dark:border-indigo-800/70 bg-indigo-50/80 dark:bg-indigo-950/40 backdrop-blur-sm text-indigo-700 dark:text-indigo-300 font-bold text-sm hover:border-indigo-500 dark:hover:border-indigo-500 hover:bg-indigo-100 dark:hover:bg-indigo-900/50 hover:-translate-y-0.5 transition-all duration-300 shadow-sm"
-          >
-            <Download size={16} />
-            Download CV
-          </a>
-          <a
-            href="https://linkedin.com/in/suresh-gudibanda-77b5bb22a"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-2xl border border-gray-200 dark:border-gray-700 bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm text-gray-700 dark:text-gray-300 font-bold text-sm hover:border-indigo-500 dark:hover:border-indigo-500 hover:text-indigo-600 dark:hover:text-indigo-400 hover:-translate-y-0.5 transition-all duration-300 shadow-sm"
-          >
-            <ExternalLink size={16} />
-            LinkedIn
-          </a>
+        {/* CTA buttons */}
+        <div className="w-full sm:w-auto flex flex-col items-stretch gap-3 pt-1 animate-slide-up delay-400 px-2 sm:px-0">
+          {/* Row 1: primary */}
+          <div className="flex gap-3">
+            <a
+              href="#contact"
+              className="flex-1 inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-2xl bg-gradient-to-r from-indigo-600 to-violet-600 hover:from-indigo-500 hover:to-violet-500 text-white font-bold text-sm shadow-lg shadow-indigo-500/30 hover:shadow-indigo-500/50 hover:-translate-y-0.5 transition-all duration-300"
+            >
+              <Mail size={16} />
+              Get In Touch
+            </a>
+            <a
+              href="/resume/resume.pdf"
+              download="Suresh_Gudibanda_Resume.pdf"
+              className="flex-1 inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-2xl border border-indigo-200 dark:border-indigo-800/70 bg-indigo-50/80 dark:bg-indigo-950/40 backdrop-blur-sm text-indigo-700 dark:text-indigo-300 font-bold text-sm hover:border-indigo-500 dark:hover:border-indigo-500 hover:bg-indigo-100 dark:hover:bg-indigo-900/50 hover:-translate-y-0.5 transition-all duration-300 shadow-sm"
+            >
+              <Download size={16} />
+              Download CV
+            </a>
+          </div>
+          {/* Row 2: social */}
+          <div className="flex gap-3">
+            <a
+              href="https://github.com/Gudibanda-Suresh"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex-1 inline-flex items-center justify-center gap-2 px-6 py-3 rounded-2xl border border-gray-200 dark:border-gray-700 bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm text-gray-700 dark:text-gray-300 font-bold text-sm hover:border-indigo-500 dark:hover:border-indigo-500 hover:text-indigo-600 dark:hover:text-indigo-400 hover:-translate-y-0.5 transition-all duration-300 shadow-sm"
+            >
+              <ExternalLink size={15} />
+              GitHub
+            </a>
+            <a
+              href="https://linkedin.com/in/suresh-gudibanda-77b5bb22a"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex-1 inline-flex items-center justify-center gap-2 px-6 py-3 rounded-2xl border border-gray-200 dark:border-gray-700 bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm text-gray-700 dark:text-gray-300 font-bold text-sm hover:border-indigo-500 dark:hover:border-indigo-500 hover:text-indigo-600 dark:hover:text-indigo-400 hover:-translate-y-0.5 transition-all duration-300 shadow-sm"
+            >
+              <ExternalLink size={15} />
+              LinkedIn
+            </a>
+          </div>
         </div>
 
         {/* Stats */}

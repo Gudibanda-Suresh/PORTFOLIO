@@ -17,45 +17,6 @@ const certifications = [
     cardBorder: 'border-gray-200 dark:border-gray-800 hover:border-orange-300 dark:hover:border-orange-900',
     barColor: 'from-orange-500 to-amber-400',
   },
-  {
-    name: 'Spring Professional Certification',
-    org: 'VMware / Broadcom',
-    orgShort: 'SP',
-    relevance: 'Certifies deep expertise in Spring ecosystem — core to daily work.',
-    target: 'Q3 2026',
-    gradient: 'from-green-500 to-emerald-400',
-    orgBg: 'bg-green-950/50 border-green-800/50',
-    orgText: 'text-green-400',
-    badgeBg: 'bg-green-950/40 text-green-400 border-green-800/40',
-    cardBorder: 'border-gray-200 dark:border-gray-800 hover:border-green-300 dark:hover:border-green-900',
-    barColor: 'from-green-500 to-emerald-400',
-  },
-  {
-    name: 'Meta React Developer',
-    org: 'Meta · Coursera',
-    orgShort: 'M',
-    relevance: 'Strengthens frontend credibility alongside backend expertise.',
-    target: 'Q4 2026',
-    gradient: 'from-blue-500 to-cyan-400',
-    orgBg: 'bg-blue-950/50 border-blue-800/50',
-    orgText: 'text-blue-400',
-    badgeBg: 'bg-blue-950/40 text-blue-400 border-blue-800/40',
-    cardBorder: 'border-gray-200 dark:border-gray-800 hover:border-blue-300 dark:hover:border-blue-900',
-    barColor: 'from-blue-500 to-cyan-400',
-  },
-  {
-    name: 'Google Cloud Associate',
-    org: 'Google Cloud',
-    orgShort: 'GCP',
-    relevance: 'Expands cloud knowledge beyond AWS for broader opportunities.',
-    target: 'Q1 2027',
-    gradient: 'from-indigo-500 to-violet-400',
-    orgBg: 'bg-indigo-950/50 border-indigo-800/50',
-    orgText: 'text-indigo-400',
-    badgeBg: 'bg-indigo-950/40 text-indigo-400 border-indigo-800/40',
-    cardBorder: 'border-gray-200 dark:border-gray-800 hover:border-indigo-300 dark:hover:border-indigo-900',
-    barColor: 'from-indigo-500 to-violet-400',
-  },
 ]
 
 export default function Certifications() {
@@ -72,7 +33,7 @@ export default function Certifications() {
           inView={inView}
         />
 
-        <div className="mt-8 sm:mt-12 grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div className="mt-8 sm:mt-12 max-w-xl">
           {certifications.map(({ name, org, orgShort, relevance, target, gradient, orgBg, orgText, badgeBg, cardBorder, barColor }, i) => (
             <div
               key={name}

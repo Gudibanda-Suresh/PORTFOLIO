@@ -5,28 +5,6 @@ import { Code2, ExternalLink, Clock, Lock } from 'lucide-react'
 
 const projects = [
   {
-    title: 'Spring Boot REST API',
-    type: 'Backend',
-    description:
-      'A production-ready REST API with JWT authentication, role-based access control, rate limiting, and PostgreSQL integration. Containerized with Docker.',
-    tags: ['Spring Boot', 'JWT', 'PostgreSQL', 'Docker', 'Gradle'],
-    gradient: 'from-indigo-600 via-indigo-500 to-violet-600',
-    headerBg: 'from-indigo-950/80 to-violet-950/80',
-    typeBg: 'bg-indigo-500/15 text-indigo-400 border-indigo-500/30',
-    dotColor: 'bg-indigo-500',
-  },
-  {
-    title: 'Full Stack Dashboard',
-    type: 'Full Stack',
-    description:
-      'End-to-end web application with a React frontend and microservices backend. Features real-time event streaming via Kafka and CI/CD with GitLab pipelines.',
-    tags: ['React', 'Spring Boot', 'Kafka', 'Kubernetes', 'GitLab CI'],
-    gradient: 'from-violet-600 via-fuchsia-500 to-cyan-600',
-    headerBg: 'from-violet-950/80 to-cyan-950/80',
-    typeBg: 'bg-violet-500/15 text-violet-400 border-violet-500/30',
-    dotColor: 'bg-violet-500',
-  },
-  {
     title: 'Keycloak Auth Service',
     type: 'Security',
     description:

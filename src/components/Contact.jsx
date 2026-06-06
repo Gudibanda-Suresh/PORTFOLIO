@@ -17,6 +17,15 @@ const contactLinks = [
   },
   {
     icon: ExternalLink,
+    label: 'GitHub',
+    value: 'github.com/Gudibanda-Suresh',
+    href: 'https://github.com/Gudibanda-Suresh',
+    color: 'from-gray-600 to-gray-700',
+    bg: 'bg-gray-50 dark:bg-gray-800/60 border-gray-200 dark:border-gray-700/50',
+    hover: 'hover:border-gray-400 dark:hover:border-gray-600',
+  },
+  {
+    icon: ExternalLink,
     label: 'LinkedIn',
     value: 'suresh-gudibanda-77b5bb22a',
     href: 'https://linkedin.com/in/suresh-gudibanda-77b5bb22a',

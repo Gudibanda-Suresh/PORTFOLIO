@@ -1,7 +1,15 @@
-import { Mail, ExternalLink, ArrowUp } from 'lucide-react'
+import { Mail, ExternalLink, ArrowUp, User, Code2, Briefcase, FolderOpen, GraduationCap, Award, MessageSquare, Link } from 'lucide-react'
 import SGLogo from './SGLogo'
 
-const navLinks = ['About', 'Skills', 'Experience', 'Projects', 'Education', 'Certifications', 'Contact']
+const navLinks = [
+  { label: 'About',          icon: User },
+  { label: 'Skills',         icon: Code2 },
+  { label: 'Experience',     icon: Briefcase },
+  { label: 'Projects',       icon: FolderOpen },
+  { label: 'Education',      icon: GraduationCap },
+  { label: 'Certifications', icon: Award },
+  { label: 'Contact',        icon: MessageSquare },
+]
 
 export default function Footer() {
   return (
@@ -30,42 +38,52 @@ export default function Footer() {
           </div>
 
           {/* Nav links */}
-          <nav className="flex flex-wrap justify-center gap-x-5 gap-y-2">
-            {navLinks.map((l) => (
+          <nav className="flex flex-wrap justify-center gap-x-1 gap-y-1">
+            {navLinks.map(({ label, icon: Icon }) => (
               <a
-                key={l}
-                href={`#${l.toLowerCase()}`}
-                className="text-sm text-gray-500 hover:text-indigo-400 transition-colors duration-200"
+                key={label}
+                href={`#${label.toLowerCase()}`}
+                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium text-gray-500 hover:text-indigo-400 hover:bg-indigo-500/10 transition-all duration-200 group"
               >
-                {l}
+                <Icon size={12} className="group-hover:scale-110 transition-transform duration-200" />
+                {label}
               </a>
             ))}
           </nav>
 
-          {/* Social icons */}
-          <div className="flex items-center gap-3">
+          {/* Social links */}
+          <div className="flex flex-wrap justify-center gap-2">
             <a
               href="mailto:gudibandasuresh3@gmail.com"
-              aria-label="Email"
-              className="w-10 h-10 rounded-xl bg-gray-900 border border-gray-800 flex items-center justify-center text-gray-500 hover:text-indigo-400 hover:border-indigo-500/50 transition-all duration-200"
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-gray-900 border border-gray-800 text-xs font-semibold text-gray-400 hover:text-indigo-400 hover:border-indigo-500/50 hover:bg-indigo-500/5 transition-all duration-200 group"
             >
-              <Mail size={16} />
+              <Mail size={13} className="group-hover:scale-110 transition-transform duration-200" />
+              Email
+            </a>
+            <a
+              href="https://github.com/Gudibanda-Suresh"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-gray-900 border border-gray-800 text-xs font-semibold text-gray-400 hover:text-indigo-400 hover:border-indigo-500/50 hover:bg-indigo-500/5 transition-all duration-200 group"
+            >
+              <Link size={13} className="group-hover:scale-110 transition-transform duration-200" />
+              GitHub
             </a>
             <a
               href="https://linkedin.com/in/suresh-gudibanda-77b5bb22a"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="LinkedIn"
-              className="w-10 h-10 rounded-xl bg-gray-900 border border-gray-800 flex items-center justify-center text-gray-500 hover:text-indigo-400 hover:border-indigo-500/50 transition-all duration-200"
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-gray-900 border border-gray-800 text-xs font-semibold text-gray-400 hover:text-indigo-400 hover:border-indigo-500/50 hover:bg-indigo-500/5 transition-all duration-200 group"
             >
-              <ExternalLink size={16} />
+              <ExternalLink size={13} className="group-hover:scale-110 transition-transform duration-200" />
+              LinkedIn
             </a>
             <button
               onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-              aria-label="Back to top"
-              className="w-10 h-10 rounded-xl bg-indigo-600/20 border border-indigo-500/30 flex items-center justify-center text-indigo-400 hover:bg-indigo-600/40 hover:border-indigo-400 transition-all duration-200"
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-indigo-600/20 border border-indigo-500/30 text-xs font-semibold text-indigo-400 hover:bg-indigo-600/40 hover:border-indigo-400 transition-all duration-200 group"
             >
-              <ArrowUp size={16} />
+              <ArrowUp size={13} className="group-hover:scale-110 transition-transform duration-200" />
+              Top
             </button>
           </div>
         </div>
