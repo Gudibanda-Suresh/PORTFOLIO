@@ -193,12 +193,12 @@ export default function PersonalNote() {
               <span className="absolute -top-3 -left-1 text-7xl font-serif text-indigo-200 dark:text-indigo-900/60 select-none leading-none">"</span>
               <div className="relative pl-3">
                 <p className="text-sm sm:text-base font-semibold italic text-gray-700 dark:text-gray-300 leading-relaxed">
-                  Practice makes a man perfect.
+                  Trust the process until you see unfortunately to congratulations.
                 </p>
                 <div className="mt-3 flex items-center gap-2">
                   <div className="h-px flex-1 bg-gradient-to-r from-indigo-300 to-transparent dark:from-indigo-700" />
                   <p className="text-xs font-bold text-indigo-500 dark:text-indigo-400 whitespace-nowrap">
-                    — William Shakespeare
+                    — Suresh Gudibanda
                   </p>
                 </div>
               </div>
